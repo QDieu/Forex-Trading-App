@@ -4,7 +4,6 @@ import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
 import FormControlLabel from "@mui/material/FormControlLabel";
-import Checkbox from "@mui/material/Checkbox";
 import Link from "@mui/material/Link";
 import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
@@ -18,16 +17,21 @@ import facebook from "../../assets/Icons/facebook.png";
 import google from "../../assets/Icons/google.png";
 import linkedin from "../../assets/Icons/linkedin.png";
 import orange from "../../assets/Icons/orange.png";
+import Checkbox from "@mui/material/Checkbox";
+
+const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
 // const theme = createTheme();
 
-export default function SignIn() {
+export default function SignUp() {
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     console.log({
-      email: data.get("email"),
+      firstName: data.get("firstName"),
+      lastName: data.get("lastName"),
       password: data.get("password"),
+      confirmPassword: data.get("ConfirmPassword"),
     });
   };
 
@@ -75,15 +79,85 @@ export default function SignIn() {
                 </span>
                 <h2> Traider</h2>
               </Grid>
-              <h1>Welcome Back!</h1>
+              <h1>Create an account</h1>
               <p style={{ marginBottom: 20 }}>
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                 Impedit, iusto mollitia a consequuntur, incidunt totam obcaecati
                 repellendus unde quidem
               </p>
+              <Grid
+                container
+                direction="row"
+                justifyContent="space-between"
+                alignItems="center"
+              >
+                <Grid>
+                  <Grid>
+                    <h5>First name</h5>
+                  </Grid>
+                  <TextField
+                    // xl={10}
+                    sx={{
+                      "& .MuiOutlinedInput-root": {
+                        "& > fieldset": {
+                          borderColor: "rgb(39, 39, 39)",
+                        },
+                      },
+                      "& .MuiOutlinedInput-root:hover": {
+                        "& > fieldset": {
+                          borderColor: "rgb(39, 39, 39)",
+                        },
+                      },
+                    }}
+                    inputProps={{
+                      style: { color: "#737374", fontSize: 13 },
+                    }}
+                    className="inputField"
+                    margin="normal"
+                    placeholder="Enter first name"
+                    required
+                    // fullWidth
+                    id="firstName"
+                    size="small"
+                    name="firstName"
+                    // autoComplete="email"
+                  />
+                </Grid>
+                <Grid>
+                  <Grid>
+                    <h5>Last name</h5>
+                  </Grid>
+                  <TextField
+                    sx={{
+                      "& .MuiOutlinedInput-root": {
+                        "& > fieldset": {
+                          borderColor: "rgb(39, 39, 39)",
+                        },
+                      },
+                      "& .MuiOutlinedInput-root:hover": {
+                        "& > fieldset": {
+                          borderColor: "rgb(39, 39, 39)",
+                        },
+                      },
+                    }}
+                    inputProps={{
+                      style: { color: "#737374", fontSize: 13 },
+                    }}
+                    className="inputField"
+                    margin="normal"
+                    placeholder="Enter last name"
+                    required
+                    // fullWidth
+                    id="lastName"
+                    size="small"
+                    name="lastName"
+                    // autoComplete="email"
+                  />
+                </Grid>
+              </Grid>
 
               <Grid>
-                <h5>Email address</h5>
+                <h5>Password</h5>
               </Grid>
               <TextField
                 sx={{
@@ -103,16 +177,17 @@ export default function SignIn() {
                 }}
                 className="inputField"
                 margin="normal"
-                placeholder="Enter email address"
+                placeholder="Create password"
                 required
                 fullWidth
-                id="email"
+                id="password"
+                type="password"
                 size="small"
-                name="email"
-                autoComplete="email"
+                name="password"
+                // autoComplete="email"
               />
               <Grid>
-                <h5>Password</h5>
+                <h5>Confirm password</h5>
               </Grid>
               <TextField
                 sx={{
@@ -134,78 +209,35 @@ export default function SignIn() {
                 required
                 fullWidth
                 size="small"
-                name="password"
+                name="ConfirmPassword"
                 type="password"
-                id="password"
-                autoComplete="current-password"
+                id="ConfirmPassword"
+                // autoComplete="current-password"
               />
               <Grid
                 container
                 direction="row"
-                justifyContent="flex-end"
-                alignItems="flex-end"
+                //   justifyContent="center"
+                alignItems="center"
               >
-                <Link
-                  href="#"
-                  variant="body2"
-                  underline="none"
-                  sx={{ color: "#737374" }}
-                >
-                  Forgot password?
-                </Link>
+                <Checkbox {...label} />
+                <p style={{ color: "rgb(209, 209, 209)" }}>
+                  I agree all the statements included in&nbsp;
+                </p>
+                <p style={{ color: "#ee6535" }}>Terms of Use &nbsp;</p>
               </Grid>
+
               <Button
                 type="submit"
                 fullWidth
                 variant="contained"
                 sx={{ mt: 3, mb: 2, backgroundColor: "#ee6535" }}
               >
-                Sign In
+                Continue
               </Button>
-
-              <Grid
-                container
-                direction="row"
-                justifyContent="center"
-                alignItems="center"
-              >
-                <p>Or continue with this social profile</p>
-              </Grid>
-              <Grid container direction="row" justifyContent="center">
-                <span className="icon">
-                  <img src={google} width="20px" height="20px" />
-                </span>
-                <span className="icon">
-                  <img src={facebook} width="20px" height="20px" />
-                </span>
-                <span className="icon">
-                  <img src={linkedin} width="20px" height="20px" />{" "}
-                </span>
-              </Grid>
             </Box>
           </Grid>
           <Grid>
-            <Grid
-              container
-              direction="row"
-              justifyContent="center"
-              alignItems="center"
-            >
-              <p style={{ color: "rgb(209, 209, 209)" }}>
-                Don't have an account? &nbsp;
-              </p>
-
-              <Link
-                href="#"
-                variant="body2"
-                href="#"
-                variant="body2"
-                underline="none"
-                sx={{ color: "#ee6535", fontSize: 13 }}
-              >
-                {"Sign Up"}
-              </Link>
-            </Grid>
             <Grid
               container
               direction="row"

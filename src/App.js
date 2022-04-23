@@ -1,11 +1,11 @@
 import "./App.css";
-import SignIn from "./components/SigninScreen/SignIn";
-
+import MainScreen from "./components/MainScreen/MainScreen";
 function App() {
   return (
-    <div className="App">
-      <SignIn />
-    </div>
+   
+      <div className="App">
+        <MainScreen/>
+      </div>
   );
 }
 
