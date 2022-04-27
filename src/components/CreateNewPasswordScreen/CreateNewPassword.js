@@ -1,20 +1,35 @@
 import * as React from "react";
+import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
+import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import Link from "@mui/material/Link";
+import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
+// import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
+import Typography from "@mui/material/Typography";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { fontSize } from "@mui/system";
 import "./style.css";
+import facebook from "../../assets/Icons/facebook.png";
+import google from "../../assets/Icons/google.png";
+import linkedin from "../../assets/Icons/linkedin.png";
 import orange from "../../assets/Icons/orange.png";
+import Checkbox from "@mui/material/Checkbox";
 
+const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
 // const theme = createTheme();
 
-export default function VerifyOTP() {
+export default function CreateNewPassword() {
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     console.log({
-      phoneNumber: data.get("phoneNumber"),
+      password: data.get("password"),
+      confirmPassword: data.get("ConfirmPassword"),
     });
   };
 
@@ -62,13 +77,15 @@ export default function VerifyOTP() {
                 </span>
                 <h2> Traider</h2>
               </Grid>
-              <h1>Verify OTP</h1>
+              <h1>Create new password</h1>
               <p style={{ marginBottom: 20 }}>
-                Enter the OTP sent to this number
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Impedit, iusto mollitia a consequuntur, incidunt totam obcaecati
+                repellendus unde quidem
               </p>
 
               <Grid>
-                <h5>Phone number</h5>
+                <h5>Password</h5>
               </Grid>
               <TextField
                 sx={{
@@ -88,16 +105,44 @@ export default function VerifyOTP() {
                 }}
                 className="inputField"
                 margin="normal"
-                placeholder="10 digit number"
+                placeholder="Create password"
                 required
                 fullWidth
-                id="phoneNumber"
-                type="text"
+                id="password"
+                type="password"
                 size="small"
-                name="phoneNumber"
+                name="password"
                 // autoComplete="email"
               />
-
+              <Grid>
+                <h5>Confirm password</h5>
+              </Grid>
+              <TextField
+                sx={{
+                  "& .MuiOutlinedInput-root ": {
+                    "& > fieldset": {
+                      borderColor: "rgb(39, 39, 39)",
+                    },
+                  },
+                  "& .MuiOutlinedInput-root:hover": {
+                    "& > fieldset": {
+                      borderColor: "rgb(39, 39, 39)",
+                    },
+                  },
+                }}
+                inputProps={{ style: { color: "#737374", fontSize: 13 } }}
+                className="inputField"
+                margin="normal"
+                placeholder="Re-enter password"
+                required
+                fullWidth
+                size="small"
+                name="ConfirmPassword"
+                type="password"
+                id="ConfirmPassword"
+                // autoComplete="current-password"
+              />
+            
               <Button
                 type="submit"
                 fullWidth

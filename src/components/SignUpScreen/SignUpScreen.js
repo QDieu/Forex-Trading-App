@@ -13,9 +13,6 @@ import Typography from "@mui/material/Typography";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { fontSize } from "@mui/system";
 import "./style.css";
-import facebook from "../../assets/Icons/facebook.png";
-import google from "../../assets/Icons/google.png";
-import linkedin from "../../assets/Icons/linkedin.png";
 import orange from "../../assets/Icons/orange.png";
 import Checkbox from "@mui/material/Checkbox";
 
@@ -205,7 +202,7 @@ export default function SignUp() {
                 inputProps={{ style: { color: "#737374", fontSize: 13 } }}
                 className="inputField"
                 margin="normal"
-                placeholder="Enter password"
+                placeholder="Re-enter password"
                 required
                 fullWidth
                 size="small"

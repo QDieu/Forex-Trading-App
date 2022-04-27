@@ -4,7 +4,12 @@ import Grid from "@mui/material/Grid";
 import SignIn from "../SigninScreen/SignIn";
 import SignUp from "../SignUpScreen/SignUpScreen";
 import VerifyPhoneNumber from "../VerifyPhoneNumberScreen/VerifyPhoneNumber";
-import VerifyOTP from "../VerifyPhoneOTPScreen/VerifyOTP";
+import VerifyPhoneOTP from "../VerifyPhoneOTPScreen/VerifyPhoneOTP";
+import VerifyEmailOTP from "../VerifyEmailOTPScreen/VerifyEmailOTP";
+import ForgotPassword from "../ForgotPasswordScreen /ForgotPassword";
+import ForgotPasswordVerifyOTP from "../ForgotPasswordVerifyOTPScreen/ForgotPasswordVerifyOTP";
+import CreateNewPassword from "../CreateNewPasswordScreen/CreateNewPassword";
+import PreSignUp from "../PreSignUpScreen/PreSignUp";
 
 // const theme = createTheme();
 
@@ -56,10 +61,15 @@ export default function MainScreen() {
 
       {/* SIGNIN SCREEN */}
 
-      <SignIn />
+      {/* <SignIn /> */}
       {/* <SignUp /> */}
-      {/* <VerifyPhoneNumber/> */}
-      {/* <VerifyOTP/> */}
+      {/* <VerifyPhoneNumber /> */}
+      {/* <VerifyPhoneOTP /> */}
+      {/* <VerifyEmailOTP/> */}
+      {/* <ForgotPassword/> */}
+      {/* <ForgotPasswordVerifyOTP/> */}
+      {/* <CreateNewPassword/> */}
+      <PreSignUp />
     </Grid>
   );
 }
