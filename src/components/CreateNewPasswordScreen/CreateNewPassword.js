@@ -4,7 +4,7 @@ import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
 import FormControlLabel from "@mui/material/FormControlLabel";
-import Link from "@mui/material/Link";
+// import Link from "@mui/material/Link";
 import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
@@ -18,6 +18,10 @@ import google from "../../assets/Icons/google.png";
 import linkedin from "../../assets/Icons/linkedin.png";
 import orange from "../../assets/Icons/orange.png";
 import Checkbox from "@mui/material/Checkbox";
+import { Link } from "react-router-dom";
+import MainScreen from "../MainScreen/MainScreen";
+
+
 
 const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
@@ -34,6 +38,7 @@ export default function CreateNewPassword() {
   };
 
   return (
+    <MainScreen>
     <Grid
       className="leftSide"
       item
@@ -142,8 +147,15 @@ export default function CreateNewPassword() {
                 id="ConfirmPassword"
                 // autoComplete="current-password"
               />
-            
-              <Button
+               <Link
+                  to={"/"}
+                  style={{
+                    color: "#ee6535",
+                    fontSize: 13,
+                    textDecoration: "none",
+                  }}
+                >
+                  <Button
                 type="submit"
                 fullWidth
                 variant="contained"
@@ -151,6 +163,9 @@ export default function CreateNewPassword() {
               >
                 Continue
               </Button>
+                </Link>
+            
+            
             </Box>
           </Grid>
           <Grid>
@@ -166,5 +181,7 @@ export default function CreateNewPassword() {
         </Grid>
       </Box>
     </Grid>
+    </MainScreen>
+
   );
 }

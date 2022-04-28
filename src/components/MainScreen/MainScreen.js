@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useState } from "react";
 import CssBaseline from "@mui/material/CssBaseline";
 import Grid from "@mui/material/Grid";
 import SignIn from "../SigninScreen/SignIn";
@@ -11,9 +12,12 @@ import ForgotPasswordVerifyOTP from "../ForgotPasswordVerifyOTPScreen/ForgotPass
 import CreateNewPassword from "../CreateNewPasswordScreen/CreateNewPassword";
 import PreSignUp from "../PreSignUpScreen/PreSignUp";
 
-// const theme = createTheme();
+export default function MainScreen(props) {
+  const [signup, setSignup] = useState(true);
+  const [preSignup, setPreSignup] = useState(false);
 
-export default function MainScreen() {
+  console.log("props", props);
+
   return (
     <Grid
       container
@@ -58,10 +62,11 @@ export default function MainScreen() {
       </Grid>
 
       {/* right side */}
-
+      {props.children}
       {/* SIGNIN SCREEN */}
+      {/* <SignIn />
+      <PreSignUp /> */}
 
-      {/* <SignIn /> */}
       {/* <SignUp /> */}
       {/* <VerifyPhoneNumber /> */}
       {/* <VerifyPhoneOTP /> */}
@@ -69,7 +74,6 @@ export default function MainScreen() {
       {/* <ForgotPassword/> */}
       {/* <ForgotPasswordVerifyOTP/> */}
       {/* <CreateNewPassword/> */}
-      <PreSignUp />
     </Grid>
   );
 }

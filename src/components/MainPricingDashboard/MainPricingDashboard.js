@@ -19,8 +19,6 @@ import Switch from "@mui/material/Switch";
 import "./style.css";
 import orange from "../../assets/Icons/orange.png";
 import StickyFooter from "../Footer/Footer";
-import Pricing from "../PricingScreen/Pricing";
-import SetupPayment from "../SetupPaymentScreen/SetupPayment";
 
 const tiers = [
   {
@@ -66,7 +64,7 @@ const tiers = [
   },
 ];
 
-function PricingContent() {
+export default function MainPricingDashboard(props) {
   return (
     <React.Fragment>
       <Grid sx={{ backgroundColor: "#0f0f11" }}>
@@ -93,17 +91,15 @@ function PricingContent() {
           </AppBar>
         </Box>
 
+        {props.children}
         {/* Hero unit */}
-    {/* <Pricing/> */}
-    <SetupPayment/>
+        {/* <Pricing/> */}
+        {/* <SetupPayment/> */}
         {/* End hero unit */}
-     
+        {/* <SelectBroker /> */}
+        {/* <ConnectPopup/> */}
       </Grid>
-      <StickyFooter/>
+      <StickyFooter />
     </React.Fragment>
   );
-}
-
-export default function MainPricingScreen() {
-  return <PricingContent />;
 }

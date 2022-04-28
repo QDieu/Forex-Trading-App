@@ -1,5 +1,5 @@
 import * as React from "react";
-
+import { useState } from "react";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -16,8 +16,12 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import "./style.css";
 import Credit from "./Credit";
 import Paypal from "./Paypal";
+import MainPricingDashboard from "../MainPricingDashboard/MainPricingDashboard";
 
-export default function SetupPayment() {
+export default function SetupPayment(props) {
+  const [credit, setCredit] = useState(true);
+  const [debit, setDebit] = useState(false);
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -28,105 +32,112 @@ export default function SetupPayment() {
   };
   return (
     <React.Fragment>
-      <Grid sx={{ backgroundColor: "#0f0f11" }}>
-        {/* Hero unit */}
+      <MainPricingDashboard>
+        <Grid sx={{ backgroundColor: "#0f0f11" }}>
+          {/* Hero unit */}
 
-        {/* End hero unit */}
-        <Container
-          maxWidth="lg"
-          component="main"
-          sx={{ backgroundColor: "none", height: "100vh" }}
-        >
-          <Grid
-            container
-            direction="row"
-            justifyContent="center"
-            alignItems="center"
+          {/* End hero unit */}
+          <Container
+            maxWidth="lg"
+            component="main"
+            sx={{ backgroundColor: "none", height: "100vh" }}
           >
-            <h1>Set up your payment</h1>
-          </Grid>
-
-          <Grid
-            container
-            direction="row"
-            justifyContent="center"
-            alignItems="center"
-          >
-            <p>Your membership starts as soon as you set up payment. </p>
-          </Grid>
-          <Grid
-            container
-            direction="row"
-            justifyContent="center"
-            alignItems="center"
-          >
-            <Checkbox
-              defaultChecked
-              size="small"
-              style={{
-                transform: "scale(0.7)",
-              }}
-            />
-            <p>No commitments, cancel any time. </p>
-            <Checkbox
-              defaultChecked
-              size="small"
-              style={{
-                transform: "scale(0.7)",
-              }}
-            />
-            <p> Cancel online any time</p>
-          </Grid>
-
-          <Container component="main" maxWidth="xs">
-            <Box
-              px={3}
-              sx={{
-                marginTop: 3,
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                backgroundColor: "#141415",
-                borderRadius: 2,
-                border: "1px solid rgb(41, 41, 41)",
-              }}
+            <Grid
+              container
+              direction="row"
+              justifyContent="center"
+              alignItems="center"
             >
-              <Grid
-                container
-                direction="row"
-                justifyContent="space-evenly"
-                alignItems="center"
+              <h1>Set up your payment</h1>
+            </Grid>
+
+            <Grid
+              container
+              direction="row"
+              justifyContent="center"
+              alignItems="center"
+            >
+              <p>Your membership starts as soon as you set up payment. </p>
+            </Grid>
+            <Grid
+              container
+              direction="row"
+              justifyContent="center"
+              alignItems="center"
+            >
+              <Checkbox
+                defaultChecked
+                size="small"
+                style={{
+                  transform: "scale(0.7)",
+                }}
+              />
+              <p>No commitments, cancel any time. </p>
+              <Checkbox
+                defaultChecked
+                size="small"
+                style={{
+                  transform: "scale(0.7)",
+                }}
+              />
+              <p> Cancel online any time</p>
+            </Grid>
+
+            <Container component="main" maxWidth="xs">
+              <Box
+                px={3}
+                sx={{
+                  marginTop: 3,
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  backgroundColor: "#141415",
+                  borderRadius: 2,
+                  border: "1px solid rgb(41, 41, 41)",
+                }}
               >
-                <Grid md={6}>
-                  {" "}
-                  <Button fullWidth variant="outlined" sx={{ fontSize: 12 }}>
-                    Credit or Debit Card
-                  </Button>
+                <Grid
+                  container
+                  direction="row"
+                  justifyContent="space-evenly"
+                  alignItems="center"
+                >
+                  <Grid md={6}>
+                    {" "}
+                    <Button
+                      fullWidth
+                      variant={credit ? "contained" : "outlined"}
+                      sx={{ fontSize: 12 }}
+                      onClick={() => {
+                        setDebit(false);
+                        setCredit(true);
+                      }}
+                    >
+                      Credit or Debit Card
+                    </Button>
+                  </Grid>
+                  <Grid md={6}>
+                    {" "}
+                    <Button
+                      fullWidth
+                      variant={debit ? "contained" : "outlined"}
+                      sx={{ fontSize: 12, m: 1 }}
+                      onClick={() => {
+                        setDebit(true);
+                        setCredit(false);
+                      }}
+                    >
+                      PayPal{" "}
+                    </Button>
+                  </Grid>
                 </Grid>
-                <Grid md={6}>
-                  {" "}
-                  <Button
-                    fullWidth
-                    variant="contained"
-                    sx={{ fontSize: 12, m: 1 }}
-                    // sx={{ mt: 3, mb: 2, backgroundColor: "#ee6535" }}
-                  >
-                    PayPal{" "}
-                  </Button>
-                </Grid>
-              </Grid>
-            </Box>
-
-              {/* <Credit/> */}
-              <Paypal/>
-
-
-              
-          
-           
+              </Box>
+              {/* {props.children} */}
+              {credit ? <Credit /> : <Paypal />}
+            </Container>
           </Container>
-        </Container>
-      </Grid>
+        </Grid>
+      </MainPricingDashboard>
     </React.Fragment>
   );
 }

@@ -12,9 +12,10 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import Checkbox from "@mui/material/Checkbox";
 import Switch from "@mui/material/Switch";
+import MainPricingDashboard from "../MainPricingDashboard/MainPricingDashboard";
+import { Link } from "react-router-dom";
 
 import "./style.css";
-
 
 const tiers = [
   {
@@ -62,7 +63,7 @@ const tiers = [
 
 export default function Pricing() {
   return (
-    <React.Fragment>
+    <MainPricingDashboard>
       <Grid sx={{ backgroundColor: "#0f0f11" }}>
         {/* Hero unit */}
 
@@ -197,21 +198,31 @@ export default function Pricing() {
                           <h1 className="head">${tier.price}</h1>
                           <p>/mo</p>
                         </Grid>
-                        <Button
-                          type="submit"
-                          fullWidth
-                          // variant="contained"
-                          fullWidth
-                          variant={tier.buttonVariant}
-                          sx={{
-                            mt: 1,
-                            mb: 2,
-                            // backgroundColor: "#ee6535",
-                            fontSize: 12,
+                        <Link
+                          to={"/setupPayment"}
+                          style={{
+                            width: '100%',
+                            // color: "#ee6535",
+                            // fontSize: 13,
+                            textDecoration: "none",
                           }}
                         >
-                          {tier.btn}
-                        </Button>
+                          {" "}
+                          <Button
+                            type="submit"
+                            // variant="contained"
+                            fullWidth
+                            variant={tier.buttonVariant}
+                            sx={{
+                              mt: 1,
+                              mb: 2,
+                              // backgroundColor: "#ee6535",
+                              fontSize: 12,
+                            }}
+                          >
+                            {tier.btn}
+                          </Button>
+                        </Link>
                       </Grid>
                     </Box>
                     <ul>
@@ -244,10 +255,6 @@ export default function Pricing() {
           </Grid>
         </Container>
       </Grid>
-    </React.Fragment>
+    </MainPricingDashboard>
   );
 }
-
-// export default function Pricing() {
-//   return <PricingContent />;
-// }
