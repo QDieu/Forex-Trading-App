@@ -37,12 +37,18 @@ export default function PreSignUp() {
     <MainScreen>
       <Grid
         className="leftSide"
-        item
+      
+        
         xs={12}
-        sm={8}
-        md={5.5}
-        sx={{ padding: 5, paddingRight: 15 }}
+        sm={12}
+        md={5}
+        lg={5.5}
+        sx={{ padding: 5, paddingRight: {lg: 15 ,md : 0, sm : 0 }}}
         square
+        container
+  direction="row"
+  justifyContent="center"
+  alignItems="center"
       >
         <Box
           sx={{
@@ -78,7 +84,7 @@ export default function PreSignUp() {
                   </span>
                   <h2> Traider</h2>
                 </Grid>
-                <h1>Start inventing with UK's largest brokerages</h1>
+                <h1><Grid sx={{fontSize: {md:35 , lg: 40}}}>Start investing with UK's largest brokerages</Grid></h1>
                 <p style={{ marginBottom: 20 }}>
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                   Impedit,

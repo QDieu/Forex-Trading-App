@@ -36,13 +36,15 @@ export default function SignUp() {
   return (
     <MainScreen>
       <Grid
+      item
         className="leftSide"
-        item
         xs={12}
-        sm={8}
-        md={5.5}
-        sx={{ padding: 5, paddingRight: 15 }}
+        sm={12}
+        md={6}
+        lg={5.5}
+        sx={{ padding: 5, paddingRight: {lg: 15 ,md : 0, sm : 0 }}}
         square
+      
       >
         <Box
           sx={{
@@ -86,16 +88,18 @@ export default function SignUp() {
                 </p>
                 <Grid
                   container
+                  spacing={1}
                   direction="row"
-                  justifyContent="space-between"
+                  // justifyContent="space-between"
                   alignItems="center"
+                  
                 >
-                  <Grid>
+                  <Grid item xs={6} >
                     <Grid>
                       <h5>First name</h5>
                     </Grid>
                     <TextField
-                      // xl={10}
+                      
                       sx={{
                         "& .MuiOutlinedInput-root": {
                           "& > fieldset": {
@@ -115,14 +119,14 @@ export default function SignUp() {
                       margin="normal"
                       placeholder="Enter first name"
                       required
-                      // fullWidth
+                      fullWidth
                       id="firstName"
                       size="small"
                       name="firstName"
                       // autoComplete="email"
                     />
                   </Grid>
-                  <Grid>
+                  <Grid item xs={6} >
                     <Grid>
                       <h5>Last name</h5>
                     </Grid>
@@ -146,7 +150,7 @@ export default function SignUp() {
                       margin="normal"
                       placeholder="Enter last name"
                       required
-                      // fullWidth
+                      fullWidth
                       id="lastName"
                       size="small"
                       name="lastName"

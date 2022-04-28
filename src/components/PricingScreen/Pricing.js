@@ -182,13 +182,14 @@ export default function Pricing() {
                         // alignItems="flex-start"
                       >
                         {" "}
-                        <Grid md={6}>
-                          <h2>Basic</h2>
+                        <Grid item xs={6} md={6}>
+                          <h2>{tier.title}</h2>
                           <p style={{ marginTop: 0 }}>
                             Free to use for 14 days
                           </p>
                         </Grid>
                         <Grid
+                        xs={6}
                           md={6}
                           container
                           direction="row"

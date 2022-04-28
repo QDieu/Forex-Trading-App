@@ -67,7 +67,7 @@ const tiers = [
 export default function MainPricingDashboard(props) {
   return (
     <React.Fragment>
-      <Grid sx={{ backgroundColor: "#0f0f11" }}>
+      <Grid sx={{ height :{md : '110vh' , sm: '200vh' , xs : '270vh'} , backgroundColor: "#0f0f11" }}>
         <GlobalStyles
           styles={{ ul: { margin: 0, padding: 0, listStyle: "none" } }}
         />

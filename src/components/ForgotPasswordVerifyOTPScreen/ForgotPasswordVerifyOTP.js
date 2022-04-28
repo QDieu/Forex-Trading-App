@@ -95,7 +95,8 @@ export default function ForgotPasswordVeriftOTP() {
                     </Link>
                   </Grid>
                 </p>
-                <Grid
+
+              <Grid
                   container
                   direction="column"
                   justifyContent="flex-start"
@@ -126,7 +127,7 @@ export default function ForgotPasswordVeriftOTP() {
                       borderRadius: "3px",
                       color: "white",
                       // textColor: "white",
-                      fontSize: "55px",
+                      fontSize: "45px",
                       outline: "#ee6535",
                     }}
                     focusStyle={{

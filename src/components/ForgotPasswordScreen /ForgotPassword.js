@@ -22,14 +22,14 @@ export default function ForgotPassword() {
   return (
     <MainScreen>
       <Grid
-        className="leftSide"
-        item
-        xs={12}
-        sm={8}
-        md={5.5}
-        sx={{ padding: 5, paddingRight: 15 }}
-        square
-      >
+       item
+       className="leftSide"
+       xs={12}
+       sm={12}
+       md={6}
+       lg={5.5}
+       sx={{ padding: 5, paddingRight: {lg: 15 ,md : 0, sm : 0 }}}
+       square>
         <Box
           sx={{
             mx: 4,

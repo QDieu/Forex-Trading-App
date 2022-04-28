@@ -11,6 +11,7 @@ import ForgotPassword from "../ForgotPasswordScreen /ForgotPassword";
 import ForgotPasswordVerifyOTP from "../ForgotPasswordVerifyOTPScreen/ForgotPasswordVerifyOTP";
 import CreateNewPassword from "../CreateNewPasswordScreen/CreateNewPassword";
 import PreSignUp from "../PreSignUpScreen/PreSignUp";
+import './style.css'
 
 export default function MainScreen(props) {
   const [signup, setSignup] = useState(true);
@@ -22,15 +23,17 @@ export default function MainScreen(props) {
     <Grid
       container
       component="main1"
-      sx={{ height: "100vh", backgroundColor: "#0f0f11", color: "white" }}
+      sx={{ minHeight: "100vh", backgroundColor: "#0f0f11", color: "white" }}
     >
       <CssBaseline />
       <Grid
         item
-        xs={1}
-        sm={4}
-        md={5.5}
+        // xs={1}
+        sm={false}
+        md={4}
+        lg={5.5}
         sx={{
+          display : { sm : 'none' , md: 'block'},
           backgroundImage: "url(/Images/orange.webp)",
           backgroundRepeat: "no-repeat",
           margin: 6,
@@ -49,7 +52,7 @@ export default function MainScreen(props) {
           direction="column"
           justifyContent="space-between"
         >
-          <Grid>
+          <Grid >
             {" "}
             <h1 className="leftHeading">
               Trade, track and manage brokers on TRAIDER.

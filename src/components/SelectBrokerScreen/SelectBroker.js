@@ -219,7 +219,7 @@ export default function SelectBroker() {
                     justifyContent="space-between"
                     alignItems="center"
                   >
-                    <Grid md={5} m={1}>
+                    <Grid item  xs={5} sm={5} md={5} m={1} >
                       <p
                         style={{
                           border: "1px solid rgb(41, 40, 40)",
@@ -230,7 +230,7 @@ export default function SelectBroker() {
                         }}
                       >
                         <Grid
-                          // p={2}
+                          // p={2} 
                           container
                           direction="row"
                           justifyContent="center"
@@ -257,7 +257,7 @@ export default function SelectBroker() {
                         </Grid>
                       </p>
                     </Grid>
-                    <Grid md={5} m={1}>
+                    <Grid xs={5} sm={5} md={5} m={1}>
                       <p
                         style={{
                           border: "1px solid rgb(41, 40, 40)",

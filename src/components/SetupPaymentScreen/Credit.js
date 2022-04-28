@@ -59,8 +59,10 @@ export default function Credit() {
                 direction="row"
                 justifyContent="space-between"
                 alignItems="center"
+                spacing={1}
+                
               >
-                <Grid md={5}>
+                <Grid item xs={6} >
                   <Grid>
                     <h5>First name</h5>
                   </Grid>
@@ -85,14 +87,14 @@ export default function Credit() {
                     margin="normal"
                     placeholder="Enter first name"
                     required
-                    // fullWidth
+                    fullWidth
                     id="firstName"
                     size="small"
                     name="firstName"
                     // autoComplete="email"
                   />
                 </Grid>
-                <Grid md={5}>
+                <Grid item xs={6}>
                   <Grid>
                     <h5>Last name</h5>
                   </Grid>
@@ -116,7 +118,7 @@ export default function Credit() {
                     margin="normal"
                     placeholder="Enter last name"
                     required
-                    // fullWidth
+                    fullWidth
                     id="lastName"
                     size="small"
                     name="lastName"
@@ -153,7 +155,7 @@ export default function Credit() {
                   name="password"
                   // autoComplete="email"
                 />
-                <Grid md={5}>
+                <Grid item xs={6}>
                   <Grid>
                     <h5>Expiration Date</h5>
                   </Grid>
@@ -178,14 +180,15 @@ export default function Credit() {
                     margin="normal"
                     placeholder="MM  /  YYYY"
                     required
-                    // fullWidth
+                    fullWidth
                     id="firstName"
                     size="small"
                     name="firstName"
+
                     // autoComplete="email"
                   />
                 </Grid>
-                <Grid md={5}>
+                <Grid item xs={6}>
                   <Grid>
                     <h5>CVV</h5>
                   </Grid>
@@ -209,7 +212,7 @@ export default function Credit() {
                     margin="normal"
                     placeholder="xxx"
                     required
-                    // fullWidth
+                    fullWidth
                     id="lastName"
                     size="small"
                     name="lastName"

@@ -23,6 +23,7 @@ export default function VerifyPhoneNumber() {
     <MainScreen>
       <Grid
         className="leftSide"
+      
         item
         xs={12}
         sm={8}

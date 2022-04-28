@@ -101,8 +101,9 @@ export default function SetupPayment(props) {
                   direction="row"
                   justifyContent="space-evenly"
                   alignItems="center"
+                  spacing={1}
                 >
-                  <Grid md={6}>
+                  <Grid item md={6} sm={6} xs={6}>
                     {" "}
                     <Button
                       fullWidth
@@ -116,7 +117,7 @@ export default function SetupPayment(props) {
                       Credit or Debit Card
                     </Button>
                   </Grid>
-                  <Grid md={6}>
+                  <Grid item md={6} sm={6} xs={6}>
                     {" "}
                     <Button
                       fullWidth

@@ -127,7 +127,7 @@ export default function VerifyPhoneOTP() {
                       borderRadius: "3px",
                       color: "white",
                       // textColor: "white",
-                      fontSize: "55px",
+                      fontSize: "45px",
                       outline: "#ee6535",
                     }}
                     focusStyle={{

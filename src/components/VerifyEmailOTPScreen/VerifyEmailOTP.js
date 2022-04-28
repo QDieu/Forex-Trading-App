@@ -96,7 +96,6 @@ export default function VerifyEmailOTP() {
                   justifyContent="flex-start"
                   alignItems="flex-start"
                 >
-                  {" "}
                   <p
                     style={{
                       color: "rgb(196, 194, 194)",
@@ -121,7 +120,7 @@ export default function VerifyEmailOTP() {
                       borderRadius: "3px",
                       color: "white",
                       // textColor: "white",
-                      fontSize: "55px",
+                      fontSize: "45px",
                       outline: "#ee6535",
                     }}
                     focusStyle={{
@@ -132,20 +131,23 @@ export default function VerifyEmailOTP() {
                     isInputNum={true}
                   />
                 </Grid>
-                <Link to={"/signUp"}  style={{
-                    color: "#ee6535",
-                    fontSize: 13,
-                    textDecoration: "none",
-                  }}>
-                  <Button
-                    type="submit"
-                    fullWidth
-                    variant="contained"
-                    sx={{ mt: 3, mb: 2, backgroundColor: "#ee6535" }}
-                  >
-                    Continue
-                  </Button>
-                </Link>
+                <Link
+                      to={"/signUp"}
+                      style={{
+                        color: "#ee6535",
+                        fontSize: 13,
+                        textDecoration: "none",
+                      }}
+                    >
+                       <Button
+                  type="submit"
+                  fullWidth
+                  variant="contained"
+                  sx={{ mt: 3, mb: 2, backgroundColor: "#ee6535" }}
+                >
+                  Continue
+                </Button>
+                    </Link>
               </Box>
               <Grid
                 container
