@@ -33,7 +33,6 @@ function App() {
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/setupPayment" element={<SetupPayment />} />
         <Route path="/selectBroker" element={<SelectBroker />} />
-        {/* <Route path="/" element={<SignIn/>} /> */}
       </Routes>
     </div>
   );
