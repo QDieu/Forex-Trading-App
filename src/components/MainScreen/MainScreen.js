@@ -11,7 +11,8 @@ import ForgotPassword from "../ForgotPasswordScreen /ForgotPassword";
 import ForgotPasswordVerifyOTP from "../ForgotPasswordVerifyOTPScreen/ForgotPasswordVerifyOTP";
 import CreateNewPassword from "../CreateNewPasswordScreen/CreateNewPassword";
 import PreSignUp from "../PreSignUpScreen/PreSignUp";
-import './style.css'
+import "./style.css";
+import { Typography } from "@mui/material";
 
 export default function MainScreen(props) {
   const [signup, setSignup] = useState(true);
@@ -33,7 +34,7 @@ export default function MainScreen(props) {
         md={4}
         lg={5.5}
         sx={{
-          display : { sm : 'none' , md: 'block'},
+          display: { sm: "none", md: "block" },
           backgroundImage: "url(/Images/orange.webp)",
           backgroundRepeat: "no-repeat",
           margin: 6,
@@ -52,11 +53,14 @@ export default function MainScreen(props) {
           direction="column"
           justifyContent="space-between"
         >
-          <Grid >
+          <Grid>
             {" "}
-            <h1 className="leftHeading">
-              Trade, track and manage brokers on TRAIDER.
-            </h1>
+            {/* <h1 className="leftHeading"> */}
+            <Typography  sx={{  color: "white" , fontWeight: 'bolder' , fontSize :{ md :35 , sm :30 , xs : 22} , px :8, pt : 3}}>
+              AI Driven, fully automated financial spread trading. balancing
+              profit with purpose
+            </Typography>
+            {/* </h1> */}
           </Grid>
           <Grid>
             <h2 className="leftHeadingBottom">Stocks</h2>

@@ -82,9 +82,7 @@ export default function SignUp() {
                 </Grid>
                 <h1>Create an account</h1>
                 <p style={{ marginBottom: 20 }}>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Impedit, iusto mollitia a consequuntur, incidunt totam
-                  obcaecati repellendus unde quidem
+                Stocks, Forex, Indices, Bonds, Equities
                 </p>
                 <Grid
                   container

@@ -69,7 +69,7 @@ export default function SignIn() {
                 component="form"
                 noValidate
                 onSubmit={handleSubmit}
-                sx={{ mt: 1 }}
+                sx={{ mt: 1 , width : { md: 450 , sm : 350 , xs : 300} }}
               >
                 <Grid
                   container
@@ -84,9 +84,7 @@ export default function SignIn() {
                 </Grid>
                 <h1>Welcome Back!</h1>
                 <p style={{ marginBottom: 20 }}>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Impedit, iusto mollitia a consequuntur, incidunt totam
-                  obcaecati repellendus unde quidem
+                Stocks, Forex, Indices, Bonds, Equities
                 </p>
 
                 <Grid>
