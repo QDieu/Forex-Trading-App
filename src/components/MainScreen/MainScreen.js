@@ -13,6 +13,7 @@ import CreateNewPassword from "../CreateNewPasswordScreen/CreateNewPassword";
 import PreSignUp from "../PreSignUpScreen/PreSignUp";
 import "./style.css";
 import { Typography } from "@mui/material";
+import { fontSize } from "@mui/system";
 
 export default function MainScreen(props) {
   const [signup, setSignup] = useState(true);
@@ -53,17 +54,46 @@ export default function MainScreen(props) {
           direction="column"
           justifyContent="space-between"
         >
-          <Grid>
+          <Grid >
             {" "}
             {/* <h1 className="leftHeading"> */}
-            <Typography  sx={{  color: "white" , fontWeight: 'bolder' , fontSize :{ md :35 , sm :30 , xs : 22} , px :8, pt : 3}}>
-              AI Driven, fully automated financial spread trading. balancing
-              profit with purpose
+            <Typography
+              
+              sx={{
+                color: "white",
+                fontWeight: "bolder",
+                fontSize: { lg: 30, md: 20, sm: 30, xs: 22 },
+                px: { lg: 8, md: 5, sm: 5, xs: 2 },
+                pt: 3,
+              }}
+            >
+              AI Driven, fully automated financial spread trading.{" "}
+              <Typography
+                display="inline"
+                sx={{
+                  color: "white",
+                  fontWeight: "bolder",
+                  fontSize: { lg: 40, md: 25, sm: 30, xs: 30 },
+                }}
+              >
+                balancing profit with purpose &nbsp; 
+              </Typography>
+              Financial spread trading reinvented
             </Typography>
             {/* </h1> */}
           </Grid>
           <Grid>
-            <h2 className="leftHeadingBottom">Stocks</h2>
+            <Typography
+              sx={{
+                color: "white",
+                fontWeight: "bolder",
+                fontSize: { lg: 30, md: 20, sm: 30, xs: 22 },
+                px: { lg: 8, md: 5, sm: 5, xs: 2 },
+                pt: 3,
+              }}
+            >
+              Equities, Forex, Bonds, Indices, Commodities and more...
+            </Typography>
           </Grid>
         </Grid>
       </Grid>
