@@ -62,23 +62,23 @@ export default function MainScreen(props) {
               sx={{
                 color: "white",
                 fontWeight: "bolder",
-                fontSize: { lg: 30, md: 20, sm: 30, xs: 22 },
+                fontSize: { lg: 25, md: 20, sm: 30, xs: 22 },
                 px: { lg: 8, md: 5, sm: 5, xs: 2 },
                 pt: 3,
               }}
             >
-              AI Driven, fully automated financial spread trading.{" "}
+              AI Driven Spread Trading{" "}
               <Typography
-                display="inline"
+                // display="inline"
                 sx={{
                   color: "white",
                   fontWeight: "bolder",
-                  fontSize: { lg: 40, md: 25, sm: 30, xs: 30 },
+                  fontSize: { lg: 35, md: 25, sm: 30, xs: 30 },
                 }}
               >
-                Balancing profit with purpose&nbsp; 
+                balancing profit with purpose spread trading reinvented
               </Typography>
-              financial spread trading reinvented
+            
             </Typography>
             {/* </h1> */}
           </Grid>
@@ -87,12 +87,12 @@ export default function MainScreen(props) {
               sx={{
                 color: "white",
                 fontWeight: "bolder",
-                fontSize: { lg: 25, md: 15, sm: 30, xs: 15 },
+                fontSize: { lg: 20, md: 15, sm: 30, xs: 15 },
                 px: { lg: 8, md: 5, sm: 5, xs: 2 },
                 pt: 3,
               }}
             >
-              Equities, Forex, Bonds, Indices, Commodities and more...
+              Equities, Forex, Bonds, Indices, Commodities
             </Typography>
           </Grid>
         </Grid>
