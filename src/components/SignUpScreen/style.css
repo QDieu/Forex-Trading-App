@@ -1,0 +1,58 @@
+.leftHeading {
+    font-size: 40px;
+    margin: 50px 70px;
+    color: white;
+  }
+  .leftHeadingBottom {
+    font-size: 30px;
+    margin: 0 70px;
+    color: white;
+  }
+  /* .checkBox{
+    border: 1px solid ;
+  } */
+
+  .leftSide h2 {
+    margin: 0%;
+  }
+  
+  .leftSide h1 {
+    margin-bottom: 0%;
+  }
+  .leftSide p {
+    font-size: 12px;
+    color: rgb(99, 98, 98);
+  }
+  .leftSide h5 {
+    color: rgb(191, 191, 191);
+    font-size: 15px;
+    font-weight: 100;
+    margin: 0%;
+    margin-bottom: -13px;
+    margin-top: 5px;
+  }
+  .leftSide button {
+    font-size: 13px;
+  }
+  .leftSide button:hover {
+    background-color: #ee6535;
+  }
+  .leftSide .icon {
+    border: 2px solid rgb(41, 40, 40);
+    background-color: #141415;
+    padding: 9px 10px 3px 10px;
+    border-radius: 50%;
+    margin: 8px;
+  }
+  
+  .inputField {
+    background: #141415;
+    border-color: aliceblue;
+    border-radius: 5px;
+    color: rgb(179, 187, 245) !important;
+  }
+  .inputField:focus {
+    border: none;
+    display: none;
+  }
+  
