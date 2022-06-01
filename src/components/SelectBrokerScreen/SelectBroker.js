@@ -193,12 +193,13 @@ export default function SelectBroker() {
                   }}
                 >
                   <Grid
+                    height={200}
                     container
                     direction="row"
                     justifyContent="space-between"
                     alignItems="center"
                   >
-                    <Grid item xs={5} sm={5} md={5} m={1}>
+                    <Grid item xs={5} sm={5} md={5.5} m={1}>
                       <p
                         style={{
                           border: "1px solid rgb(41, 40, 40)",
@@ -229,13 +230,13 @@ export default function SelectBroker() {
                           direction="row"
                           justifyContent="center"
                           alignItems="center"
-                          color="white"
+                          color="rgb(173, 173, 173)"
                         >
                           Oanda
                         </Grid>
                       </p>
                     </Grid>
-                    <Grid xs={5} sm={5} md={5} m={1}>
+                    <Grid xs={5} sm={5} md={5.5} m={1}>
                       <p
                         style={{
                           border: "1px solid rgb(41, 40, 40)",
@@ -265,7 +266,7 @@ export default function SelectBroker() {
                           direction="row"
                           justifyContent="center"
                           alignItems="center"
-                          color="white"
+                          color="rgb(173, 173, 173)"
                         >
                           IG
                         </Grid>
@@ -293,7 +294,7 @@ export default function SelectBroker() {
                     alignItems="center"
                   >
                     <Grid>
-                      <p style={{ margin: 0, color: "white" }}>
+                      <p style={{ margin: 0, color: "rgb(173, 173, 173)" }}>
                         How does this work?
                       </p>
                     </Grid>
@@ -303,7 +304,7 @@ export default function SelectBroker() {
                           border: "1px solid rgb(41, 40, 40)",
                           padding: "8px 16px",
                           borderRadius: 5,
-                          color: "white",
+                          color: "rgb(173, 173, 173)",
                         }}
                       >
                         Know more

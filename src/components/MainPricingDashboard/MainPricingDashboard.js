@@ -2,7 +2,7 @@ import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
-
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import CssBaseline from "@mui/material/CssBaseline";
 import Grid from "@mui/material/Grid";
 import Toolbar from "@mui/material/Toolbar";
@@ -83,7 +83,11 @@ export default function MainPricingDashboard(props) {
                 </span>
                 <h2> Traider</h2>
               </Grid>
-              <Button color="inherit">Login</Button>
+              <Button color="inherit">
+                <AccountCircleIcon
+                  style={{ color: "#ee6535", width: 45, height: 45 }}
+                />
+              </Button>
             </Toolbar>
           </AppBar>
         </Box>
