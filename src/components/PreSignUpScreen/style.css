@@ -8,7 +8,14 @@
     margin: 0 70px;
     color: white;
   }
-  
+
+  .warning{
+    width: 30px;
+    height: 30px;
+    padding: 3px;
+    border-radius: 50%;
+    background-color: rgba(255, 88, 88, 0.2);
+  }
   .leftSide h2 {
     margin: 0%;
   }

@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useState } from "react";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import Box from "@mui/material/Box";
@@ -8,6 +9,10 @@ import orange from "../../assets/Icons/orange.png";
 import Checkbox from "@mui/material/Checkbox";
 import { Link } from "react-router-dom";
 import MainScreen from "../MainScreen/MainScreen";
+import IconButton from "@mui/material/IconButton";
+import InputAdornment from "@mui/material/InputAdornment";
+import Visibility from "@mui/icons-material/Visibility";
+import VisibilityOff from "@mui/icons-material/VisibilityOff";
 
 const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
@@ -22,6 +27,13 @@ export default function SignUp() {
       confirmPassword: data.get("ConfirmPassword"),
     });
   };
+  const [showPassword, setShowPassword] = useState(false);
+  const handleClickShowPassword = () => setShowPassword(!showPassword);
+  const handleMouseDownPassword = () => setShowPassword(!showPassword);
+
+  const [showPasswor, setShowPasswor] = useState(false);
+  const handleClickShowPasswor = () => setShowPasswor(!showPasswor);
+  const handleMouseDownPasswor = () => setShowPasswor(!showPasswor);
 
   return (
     <MainScreen>
@@ -71,8 +83,14 @@ export default function SignUp() {
                 <p style={{ marginBottom: 20 }}>
                   Stocks, Forex, Indices, Bonds, Equities
                 </p>
-                <Grid container spacing={1} direction="row" alignItems="center">
-                  <Grid item xs={6}>
+                <Grid
+                  container
+                  spacing={1}
+                  direction="row"
+                  alignItems="center"
+                  justifyContent="space-between"
+                >
+                  <Grid item xs={5.8}>
                     <Grid>
                       <h5>First name</h5>
                     </Grid>
@@ -102,7 +120,7 @@ export default function SignUp() {
                       name="firstName"
                     />
                   </Grid>
-                  <Grid item xs={6}>
+                  <Grid item xs={5.8}>
                     <Grid>
                       <h5>Last name</h5>
                     </Grid>
@@ -139,7 +157,7 @@ export default function SignUp() {
                 </Grid>
                 <TextField
                   sx={{
-                    "& .MuiOutlinedInput-root": {
+                    "& .MuiOutlinedInput-root ": {
                       "& > fieldset": {
                         borderColor: "rgb(39, 39, 39)",
                       },
@@ -155,13 +173,34 @@ export default function SignUp() {
                   }}
                   className="inputField"
                   margin="normal"
-                  placeholder="Create password"
+                  placeholder="Enter password"
                   required
                   fullWidth
-                  id="password"
-                  type="password"
                   size="small"
                   name="password"
+                  //type="password"
+                  id="password"
+                  autoComplete="current-password"
+                  type={showPassword ? "text" : "password"} // <-- This is where the magic happens
+                  //onChange={someChangeHandler}
+                  InputProps={{
+                    // <-- This is where the toggle button is added.
+                    endAdornment: (
+                      <InputAdornment position="end">
+                        <IconButton
+                          aria-label="toggle password visibility"
+                          onClick={handleClickShowPassword}
+                          onMouseDown={handleMouseDownPassword}
+                        >
+                          {showPassword ? (
+                            <Visibility className="visiblePassword" />
+                          ) : (
+                            <VisibilityOff className="visiblePassword" />
+                          )}
+                        </IconButton>
+                      </InputAdornment>
+                    ),
+                  }}
                 />
                 <Grid>
                   <h5>Confirm password</h5>
@@ -188,12 +227,33 @@ export default function SignUp() {
                   required
                   fullWidth
                   size="small"
-                  name="ConfirmPassword"
-                  type="password"
-                  id="ConfirmPassword"
+                  name="confirmpassword"
+                  //type="password"
+                  id="confirmpassword"
+                  autoComplete="current-password"
+                  type={showPasswor ? "text" : "password"} // <-- This is where the magic happens
+                  //onChange={someChangeHandler}
+                  InputProps={{
+                    // <-- This is where the toggle button is added.
+                    endAdornment: (
+                      <InputAdornment position="end">
+                        <IconButton
+                          aria-label="toggle password visibility"
+                          onClick={handleClickShowPasswor}
+                          onMouseDown={handleMouseDownPasswor}
+                        >
+                          {showPasswor ? (
+                            <Visibility className="visiblePassword" />
+                          ) : (
+                            <VisibilityOff className="visiblePassword" />
+                          )}
+                        </IconButton>
+                      </InputAdornment>
+                    ),
+                  }}
                 />
                 <Grid container direction="row" alignItems="center">
-                  <Checkbox {...label} />
+                  <Checkbox className="checktheBox" {...label} />
                   <p style={{ color: "rgb(209, 209, 209)" }}>
                     I agree all the statements included in&nbsp;
                   </p>

@@ -8,9 +8,10 @@
     margin: 0 70px;
     color: white;
   }
-  /* .checkBox{
-    border: 1px solid ;
-  } */
+  .checktheBox{
+    color: rgb(41, 40, 40) !important;  
+  
+  }
 
   .leftSide h2 {
     margin: 0%;

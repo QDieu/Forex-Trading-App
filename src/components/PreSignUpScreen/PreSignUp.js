@@ -98,7 +98,7 @@ export default function PreSignUp() {
                       marginLeft: 1,
                     }}
                   >
-                    <img src={warning} width="20px" height="20px" />
+                    <img className="warning" src={warning} />
                   </Grid>
                   <Grid
                     md={10}

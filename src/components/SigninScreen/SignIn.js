@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useState } from "react";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import Box from "@mui/material/Box";
@@ -10,6 +11,10 @@ import linkedin from "../../assets/Icons/linkedin.png";
 import orange from "../../assets/Icons/orange.png";
 import MainScreen from "../MainScreen/MainScreen";
 import { Link } from "react-router-dom";
+import IconButton from "@mui/material/IconButton";
+import InputAdornment from "@mui/material/InputAdornment";
+import Visibility from "@mui/icons-material/Visibility";
+import VisibilityOff from "@mui/icons-material/VisibilityOff";
 
 export default function SignIn() {
   const handleSubmit = (event) => {
@@ -20,6 +25,10 @@ export default function SignIn() {
       password: data.get("password"),
     });
   };
+
+  const [showPassword, setShowPassword] = useState(false);
+  const handleClickShowPassword = () => setShowPassword(!showPassword);
+  const handleMouseDownPassword = () => setShowPassword(!showPassword);
 
   return (
     <MainScreen>
@@ -122,14 +131,34 @@ export default function SignIn() {
                   }}
                   className="inputField"
                   margin="normal"
-                  placeholder="Enter password"
+                  //placeholder="Enter password"
                   required
                   fullWidth
                   size="small"
                   name="password"
-                  type="password"
+                  //type="password"
                   id="password"
                   autoComplete="current-password"
+                  type={showPassword ? "text" : "password"} // <-- This is where the magic happens
+                  //onChange={someChangeHandler}
+                  InputProps={{
+                    // <-- This is where the toggle button is added.
+                    endAdornment: (
+                      <InputAdornment position="end">
+                        <IconButton
+                          aria-label="toggle password visibility"
+                          onClick={handleClickShowPassword}
+                          onMouseDown={handleMouseDownPassword}
+                        >
+                          {showPassword ? (
+                            <Visibility className="visiblePassword" />
+                          ) : (
+                            <VisibilityOff className="visiblePassword" />
+                          )}
+                        </IconButton>
+                      </InputAdornment>
+                    ),
+                  }}
                 />
                 <Grid
                   container
