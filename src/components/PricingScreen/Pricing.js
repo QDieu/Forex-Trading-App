@@ -1,7 +1,5 @@
 import * as React from "react";
-import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
-import CheckBoxIcon from "@mui/icons-material/CheckBox";
 import CheckCircleOutlineRoundedIcon from "@mui/icons-material/CheckCircleOutlineRounded";
 import Button from "@mui/material/Button";
 import Card from "@mui/material/Card";
@@ -10,7 +8,6 @@ import CardHeader from "@mui/material/CardHeader";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
-import Checkbox from "@mui/material/Checkbox";
 import Switch from "@mui/material/Switch";
 import MainPricingDashboard from "../MainPricingDashboard/MainPricingDashboard";
 import { Link } from "react-router-dom";
