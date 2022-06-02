@@ -131,6 +131,7 @@ export default function SignIn() {
                   }}
                   className="inputField"
                   margin="normal"
+                  placeholder="Enter password"
                   //placeholder="Enter password"
                   required
                   fullWidth

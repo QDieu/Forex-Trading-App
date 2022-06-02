@@ -216,7 +216,9 @@ export default function SelectBroker() {
                           alignItems="center"
                           sx={{ cursor: "pointer" }}
                         >
-                          <h1 onClick={handleOpen}>Oanda</h1>
+                          <h1 className="oandahover" onClick={handleOpen}>
+                            Oanda
+                          </h1>
                         </Grid>
                         <hr
                           style={{
@@ -252,7 +254,7 @@ export default function SelectBroker() {
                           alignItems="center"
                           sx={{ cursor: "pointer" }}
                         >
-                          <h1>IG</h1>
+                          <h1 className="oandahover">IG</h1>
                         </Grid>
                         <hr
                           style={{

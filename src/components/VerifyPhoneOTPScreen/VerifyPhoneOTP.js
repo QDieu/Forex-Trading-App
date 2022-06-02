@@ -52,7 +52,6 @@ export default function VerifyPhoneOTP() {
             sx={{ height: "88vh" }}
           >
             <Grid>
-              {" "}
               <Box
                 component="form"
                 noValidate
@@ -113,6 +112,7 @@ export default function VerifyPhoneOTP() {
                     Verify OTP
                   </p>
                   <OtpInput
+                    style={{ padding: 40 }}
                     value={otp}
                     onChange={handleChange}
                     numInputs={6}
@@ -126,8 +126,11 @@ export default function VerifyPhoneOTP() {
                       backgroundColor: "#141415",
                       borderRadius: "3px",
                       color: "white",
+                      width: "60px",
+                      height: "60px",
+                      //margin:"5px"
                       // textColor: "white",
-                      fontSize: "45px",
+                      fontSize: "40px",
                       outline: "#ee6535",
                     }}
                     focusStyle={{
@@ -139,24 +142,22 @@ export default function VerifyPhoneOTP() {
                   />
                 </Grid>
                 <Link
-                      to={"/pricing"}
-                      style={{
-                        color: "#ee6535",
-                        fontSize: 13,
-                        textDecoration: "none",
-                      }}
-                    >
-                       <Button
-                  type="submit"
-                  fullWidth
-                  variant="contained"
-                  sx={{ mt: 3, mb: 2, backgroundColor: "#ee6535" }}
+                  to={"/pricing"}
+                  style={{
+                    color: "#ee6535",
+                    fontSize: 13,
+                    textDecoration: "none",
+                  }}
                 >
-                  Continue
-                </Button>
-                    </Link>
-
-              
+                  <Button
+                    type="submit"
+                    fullWidth
+                    variant="contained"
+                    sx={{ mt: 3, mb: 2, backgroundColor: "#ee6535" }}
+                  >
+                    Continue
+                  </Button>
+                </Link>
               </Box>
               <Grid
                 container

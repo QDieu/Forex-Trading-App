@@ -37,7 +37,16 @@ export default function Credit() {
             sx={{ mt: 1 }}
           >
             <Grid>
-              <h3>Credit or Debit Card</h3>
+              <Grid container direction="row" alignItems="center">
+                <h3>Credit or Debit Card</h3>
+
+                <img
+                  style={{ marginLeft: 10 }}
+                  src="https://www.freepnglogos.com/uploads/mastercard-png/mastercard-property-tax-disclaimer-11.png"
+                  width="100"
+                  alt="mastercard, property tax disclaimer"
+                />
+              </Grid>
               <hr
                 style={{
                   border: "1px solid rgb(41, 40, 40)",
@@ -52,7 +61,7 @@ export default function Credit() {
                 alignItems="center"
                 spacing={1}
               >
-                <Grid item xs={6}>
+                <Grid item xs={5.8}>
                   <Grid>
                     <h5>First name</h5>
                   </Grid>
@@ -82,7 +91,7 @@ export default function Credit() {
                     name="firstName"
                   />
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={5.8}>
                   <Grid>
                     <h5>Last name</h5>
                   </Grid>
@@ -143,7 +152,7 @@ export default function Credit() {
                     name="password"
                   />
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={5.8}>
                   <Grid>
                     <h5>Expiration Date</h5>
                   </Grid>
@@ -173,7 +182,7 @@ export default function Credit() {
                     name="firstName"
                   />
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={5.8}>
                   <Grid>
                     <h5>CVV</h5>
                   </Grid>

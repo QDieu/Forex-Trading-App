@@ -2,6 +2,7 @@ import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import CheckBoxIcon from "@mui/icons-material/CheckBox";
+import CheckCircleOutlineRoundedIcon from "@mui/icons-material/CheckCircleOutlineRounded";
 import Button from "@mui/material/Button";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
@@ -83,29 +84,29 @@ export default function Pricing() {
             justifyContent="center"
             alignItems="center"
           >
-            <CheckBoxIcon
+            <CheckCircleOutlineRoundedIcon
               defaultChecked
               size="small"
               style={{
-                color: "#ee6535",
+                color: "rgb(97, 97, 97)",
                 transform: "scale(0.7)",
               }}
             />
             <p>No commitments, cancel any time. </p>
-            <CheckBoxIcon
+            <CheckCircleOutlineRoundedIcon
               defaultChecked
               size="small"
               style={{
-                color: "#ee6535",
+                color: "rgb(97, 97, 97)",
                 transform: "scale(0.7)",
               }}
             />
             <p>No charges or extra fees. Ever. </p>
-            <CheckBoxIcon
+            <CheckCircleOutlineRoundedIcon
               defaultChecked
               size="small"
               style={{
-                color: "#ee6535",
+                color: "rgb(97, 97, 97)",
                 transform: "scale(0.7)",
               }}
             />
@@ -230,13 +231,18 @@ export default function Pricing() {
                             lineHeight: 0.5,
                           }}
                         >
-                          <Checkbox
-                            defaultChecked
-                            style={{
-                              transform: "scale(0.7)",
-                            }}
-                          />
-                          {line}
+                          <Grid container direction="row" alignItems="center">
+                            <Grid>
+                              <CheckCircleOutlineRoundedIcon
+                                defaultChecked
+                                style={{
+                                  color: "#ee6535",
+                                  transform: "scale(0.7)",
+                                }}
+                              />
+                            </Grid>
+                            <Grid>{line}</Grid>
+                          </Grid>
                         </Typography>
                       ))}
                     </ul>
