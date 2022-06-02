@@ -61,7 +61,7 @@ export default function MainPricingDashboard(props) {
     <React.Fragment>
       <Grid
         sx={{
-          height: { md: "110vh", sm: "200vh", xs: "270vh" },
+          height: { lg: "140vh", md: "110vh", sm: "200vh", xs: "270vh" },
           backgroundColor: "#0f0f11",
         }}
       >
